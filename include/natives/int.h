@@ -22,6 +22,10 @@ typedef struct jsl_int_workspace_tag
 
 } jsl_int_workspace_t;
 
+jsl_int_workspace_t * jsl_int_stats_alloc_space(void);
+void jsl_int_stats_dealloc_space(jsl_int_workspace_t *);
+void jsl_int_stats_calculate_workspace(jsl_int_workspace_t *);
+
 
 double jsl_int_stats_mean(const int vector[], size_t length, size_t step);
 double jsl_int_stats_variance(const int vector[], size_t length, size_t step);
